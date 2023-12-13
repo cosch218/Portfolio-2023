@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
-import { About, Contact, Main, Navbar, Project, Skill } from './components';
+import { About, Contact, Main, Navbar, Project, Skill, ThemeMode } from './components';
 import './reset.css';
+import './styles/font/font.css'
 import './App.css';
 
 function App() {
@@ -25,7 +26,9 @@ function App() {
         onClickContact={() => scrollToRef(contactRef)}
       />
 
-      <Main ref={mainRef}/>
+      <ThemeMode />
+
+      <Main ref={mainRef} onClickAbout={() => scrollToRef(aboutRef)}/>
       <About ref={aboutRef} />
       <Skill ref={skillRef} />
       <Project ref={projectRef} />

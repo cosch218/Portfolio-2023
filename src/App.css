@@ -1,10 +1,18 @@
+button {
+  cursor: pointer;
+}
+
 .App {
   text-align: center;
+  font-family: 'SCoreDream';
+  font-weight: 300;
+  overflow: hidden;
 }
 
 #Main, #About, #Skill, #Project, #Contact {
   width: calc(100vw - (100vw - 100%));
   height: 100vh;
+  overflow: hidden;
 }
 
 #Navbar {
@@ -12,4 +20,11 @@
   top: 0;
   left: 0;
   width: calc(100vw - (100vw - 100%));
+  backdrop-filter: blur(5px);
+}
+
+#ThemeMode {
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
