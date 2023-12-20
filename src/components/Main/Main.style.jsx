@@ -1,6 +1,9 @@
 import styled, { keyframes } from 'styled-components';
-import profilePic from '../../assets/profile_pic.png';
+import profilePic from '../../assets/profile_pic.jpg';
 
+export const MainBox = styled.div`
+    position: relative;
+`;
 
 export const BackBoxContainer = styled.div`
     position: relative;
@@ -22,7 +25,7 @@ export const BackBox1 = styled.div`
     opacity: 0;
     width: 100%;
     height: calc(100vh / 3);
-    background-color: #e9e1e3;
+    background-color: #f3eed8;
     animation: ${BackBoxAni} 1.5s ease-in-out 0.2s;
 
     &.visible {
@@ -34,7 +37,7 @@ export const BackBox2 = styled.div`
     opacity: 0;
     width: 100%;
     height: calc(100vh / 3);
-    background-color: #e9e1e3;
+    background-color: #f3eed8;
     animation: ${BackBoxAni} 1.5s ease-in-out 0.4s;
 
     &.visible {
@@ -46,7 +49,7 @@ export const BackBox3 = styled.div`
     opacity: 0;
     width: 100%;
     height: calc(100vh / 3);
-    background-color: #e9e1e3;
+    background-color: #f3eed8;
     animation: ${BackBoxAni} 1.5s ease-in-out 0.6s;
 
     &.visible {
@@ -55,7 +58,7 @@ export const BackBox3 = styled.div`
 `;
 
 
-export const MainBox = styled.div`
+export const CenterContainer = styled.div`
     position: absolute;
     top: 48%;
     right: 50%;
@@ -133,53 +136,14 @@ export const Img = styled.div`
 `;
 
 
-
 /** 화살표 버튼 */
-export const ArrowBox = styled.div`
+export const ArrowContainer = styled.div`
     opacity: 0;
     transform: translateY(10px);
-    position: absolute;
-    bottom: 7vh;
-    left: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     
     &.visible {
         opacity: 1;
         transform: translateY(-10px);
         transition: all 0.5s ease-in-out;
     }
-`;
-
-export const ArrowContainer = styled.div`
-    position: relative;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: rgba(32, 32, 32, 0.8);
-    transform: translateX(-50%);
-`;
-
-const SpreadAni = keyframes`
-    0% {
-        opacity: 0.8;
-        transform: scale(0);
-    }
-
-    100% {
-        opacity: 0; 
-        transform: scale(1);
-    }
-`;
-
-export const ArrowBtn = styled.button`
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 0;
-    background-color: rgb(255, 255, 255);
-    animation: ${SpreadAni} 1.2s infinite ease-in-out;
-`;
+`

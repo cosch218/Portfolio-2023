@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { About, Contact, Main, Navbar, Project, Skill, ThemeMode } from './components';
 import './reset.css';
 import './styles/font/font.css'
@@ -12,12 +12,22 @@ function App() {
   const projectRef = useRef(null);
   const contactRef = useRef(null);
 
+
   const scrollToRef = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
   
   return (
     <div className="App">
+
+      <ThemeMode />
+
+      <Main ref={mainRef} onClickAbout={() => scrollToRef(aboutRef)} />
+      <About ref={aboutRef} onClickSkill={() => scrollToRef(skillRef)} />
+      <Skill ref={skillRef} onClickProject={() => scrollToRef(projectRef)} />
+      <Project ref={projectRef} onClickContact={() => scrollToRef(contactRef)} />
+      <Contact ref={contactRef} />
+
       <Navbar 
         onClickMain={() => scrollToRef(mainRef)}
         onClickAbout={() => scrollToRef(aboutRef)}
@@ -26,19 +36,12 @@ function App() {
         onClickContact={() => scrollToRef(contactRef)}
       />
 
-      <ThemeMode />
-
-      <Main ref={mainRef} onClickAbout={() => scrollToRef(aboutRef)}/>
-      <About ref={aboutRef} />
-      <Skill ref={skillRef} />
-      <Project ref={projectRef} />
-      <Contact ref={contactRef} />
-
       <footer>
         <p>Copyright 2023. 박채희. All rights reserved.</p>
         <div>git link</div>
         <div>blog link</div>
       </footer>
+
     </div>
   );
 }

@@ -40,7 +40,7 @@ export default function Navbar({
                     <List 
                         onClick={onClickSkill}
                         className={ isSkillVisible? "visible" : "" }
-                    >Skill</List>
+                    >Stack</List>
                     <List 
                         onClick={onClickProject}
                         className={ isProjectVisible? "visible" : "" }

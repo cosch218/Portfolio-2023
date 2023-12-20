@@ -38,11 +38,23 @@ export const List = styled.li`
     text-decoration: none;
     cursor: pointer;
     opacity: 0;
-    transform: translateX(-15px);
+    transform: translateX(-20px);
 
     &.visible {
         opacity: 1;
         transform: translateX(0);
-        transition: all 0.5s ease-in-out;
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    &:hover {
+        font-weight: 500;
+    }
+
+    &:hover::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #202020;
     }
 `;

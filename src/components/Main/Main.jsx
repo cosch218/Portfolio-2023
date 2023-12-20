@@ -1,8 +1,7 @@
 import React, { forwardRef, useEffect, useState } from 'react'
-import { ArrowBox, ArrowBtn, ArrowContainer, BackBox1, BackBox2, BackBox3, BackBoxContainer, Caution, CenterBox, Img, ImgBox, ImgContainer, MainBox, Typo, TypoBox, Typos } from './Main.style';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { ArrowContainer, BackBox1, BackBox2, BackBox3, BackBoxContainer, CenterBox, CenterContainer, Img, ImgBox, ImgContainer, MainBox, Typo, TypoBox, Typos } from './Main.style';
 import './Main.style'
+import Arrow from '../Arrow/Arrow';
 
 const Main = forwardRef(({onClickAbout}, ref) => {
 
@@ -25,14 +24,14 @@ const Main = forwardRef(({onClickAbout}, ref) => {
     }, []);
 
     return (
-        <div id='Main' ref={ref}>
+        <MainBox id='Main' ref={ref}>
             <BackBoxContainer>
                 <BackBox1 className={ isBox1Visible? "visible" : "" } />
                 <BackBox2 className={ isBox2Visible? "visible" : "" } />
                 <BackBox3 className={ isBox3Visible? "visible" : "" } />
             </BackBoxContainer>
 
-            <MainBox>
+            <CenterContainer>
                 <CenterBox>
                     <TypoBox>
                         <Typos className={ isTypoMove? "move" : "" }>
@@ -47,29 +46,12 @@ const Main = forwardRef(({onClickAbout}, ref) => {
                         </ImgContainer>
                     </ImgBox>
                 </CenterBox>
+            </CenterContainer>
 
-            </MainBox>
-
-            <ArrowBox className={ isArrowVisible? "visible" : "" }>
-                <ArrowContainer>
-                    <ArrowBtn type='button'></ArrowBtn>
-                    <FontAwesomeIcon 
-                        icon={faCaretDown}
-                        onClick={onClickAbout}
-                        style={{
-                            position: "absolute",
-                            top: "50%",
-                            left: "50%",
-                            transform: "translate(-50%, -50%)",
-                            color: "white",
-                            width: "50%",
-                            height: "50%",
-                            cursor: "pointer"
-                        }}
-                    />
-                </ArrowContainer>
-            </ArrowBox>
-        </div>
+            <ArrowContainer className={isArrowVisible? "visible" : ""}>
+                <Arrow onClickHandler={onClickAbout}/>
+            </ArrowContainer>
+        </MainBox>
     )
 })
 

@@ -1,11 +1,14 @@
 import React, { forwardRef } from 'react'
 import './Project.style'
+import Arrow from '../Arrow/Arrow';
+import { ProjectBox } from './Project.style';
 
-const Project = forwardRef((props, ref) => {
+const Project = forwardRef(({ onClickContact }, ref) => {
     return (
-        <div id='Project' ref={ref}>
-            Project
-        </div>
+        <ProjectBox id='Project' ref={ref}>
+            <Arrow onClickHandler={onClickContact}/>
+            
+        </ProjectBox>
     )
 })
 
