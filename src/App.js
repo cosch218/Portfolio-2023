@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { About, Contact, Main, Navbar, Project, Skill, ThemeMode } from './components';
 import './reset.css';
 import './styles/font/font.css'
@@ -12,11 +12,23 @@ function App() {
   const projectRef = useRef(null);
   const contactRef = useRef(null);
 
+  const [scrollPosition, setScrollPosition] = useState(0);
 
-  const scrollToRef = (ref) => {
-    ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-  
+  const handleScroll = () => {
+    setScrollPosition(window.scrollY);
+  }
+
+  useEffect(()=>{
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+    }, [scrollPosition])
+    
+    const scrollToRef = (ref) => {
+      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+
   return (
     <div className="App">
 
@@ -29,6 +41,7 @@ function App() {
       <Contact ref={contactRef} />
 
       <Navbar 
+        scrollPosition={scrollPosition}
         onClickMain={() => scrollToRef(mainRef)}
         onClickAbout={() => scrollToRef(aboutRef)}
         onClickSkill={() => scrollToRef(skillRef)}

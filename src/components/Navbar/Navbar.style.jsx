@@ -32,6 +32,9 @@ export const NavList = styled.ul`
     justify-content: space-between;
     list-style: none;
     
+    &.white {
+        color: white;
+    }
 `;
 
 export const List = styled.li`

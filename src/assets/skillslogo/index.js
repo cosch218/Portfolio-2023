@@ -8,6 +8,6 @@ export {default as html} from './html.svg';
 export {default as javascript} from './javascript.svg';
 export {default as notion} from './notion.svg';
 export {default as react} from './react.svg';
-export {default as sass} from './sass.svg';
 export {default as styledcomp} from './styled-components.svg';
 export {default as typescript} from './typescript.svg';
+export {default as vscode} from './vscode.svg';

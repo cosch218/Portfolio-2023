@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import {List, Logo, Nav, NavList} from './Navbar.style'
-import logoSmall from '../../assets/logo_small.png'
+import logoBlack from '../../assets/logo_nav_black.png'
+import logoWhite from '../../assets/logo_nav_white.png'
 
 
 export default function Navbar({ 
-    onClickMain, onClickAbout, onClickSkill, onClickProject, onClickContact
+    scrollPosition, onClickMain, onClickAbout, onClickSkill, onClickProject, onClickContact
 }) {
 
     const [isLogoVisible, setIsLogoVisible] = useState(false);
@@ -26,13 +27,13 @@ export default function Navbar({
         <div id='Navbar'>
             <Nav>
                 <Logo 
-                    src={logoSmall} 
+                    src={scrollPosition > 1565 && scrollPosition < 2400 ? logoWhite : logoBlack} 
                     title='logo_small' 
                     onClick={onClickMain}
                     className={ isLogoVisible? "visible" : "" }
                 />
 
-                <NavList>
+                <NavList className={scrollPosition > 1565 && scrollPosition < 2400 ? "white" : ""}>
                     <List 
                         onClick={onClickAbout}
                         className={ isAboutVisible? "visible" : "" }
