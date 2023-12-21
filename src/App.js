@@ -29,10 +29,14 @@ function App() {
       ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
     };
 
+    useEffect(()=>{
+      window.scrollTo({top: 0})
+    }, []); 
+
   return (
     <div className="App">
 
-      <ThemeMode />
+      {/*<ThemeMode />*/}
 
       <Main ref={mainRef} onClickAbout={() => scrollToRef(aboutRef)} />
       <About ref={aboutRef} onClickSkill={() => scrollToRef(skillRef)} />
@@ -49,10 +53,8 @@ function App() {
         onClickContact={() => scrollToRef(contactRef)}
       />
 
-      <footer>
+      <footer id='footer'>
         <p>Copyright 2023. 박채희. All rights reserved.</p>
-        <div>git link</div>
-        <div>blog link</div>
       </footer>
 
     </div>

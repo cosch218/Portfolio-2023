@@ -4,13 +4,14 @@ import { Explain, Group, Item, List, StackBox, Title } from './Skill.style';
 import { css, figma, firebase, github, html, illustrator, javascript, notion, photoshop, react, styledcomp, typescript, vscode } from '../../assets/skillslogo/index';
 
 const Skill = forwardRef(({ onClickProject }, ref) => {
+    
     return (
         <StackBox id='Skill' ref={ref}>
 
-            <Title>TECKSTACK</Title>
+            <Title>TECK STACK</Title>
 
             <Group>
-                <p>Development Skills</p>
+                <p>/　Development Skills　/</p>
                 <List>
                     <Item>
                         <img src={react} alt="react" width="50px" />
@@ -65,7 +66,7 @@ const Skill = forwardRef(({ onClickProject }, ref) => {
             </Group>
 
             <Group>
-                <p>Using Tools</p>
+                <p>/　Using Tools　/</p>
                 <List>
                     <Item>
                         <img src={vscode} alt="vscode" width="50px" />

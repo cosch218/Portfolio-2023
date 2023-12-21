@@ -66,7 +66,7 @@ export const Explain = styled.div`
     overflow: hidden;
     visibility: hidden;
     opacity: 0;
-    transition: left 300ms ease, opacity 300ms ease;
+    transition: left 400ms ease, opacity 400ms ease;
     color: #202020;
     border-radius: 10px;
 
