@@ -102,7 +102,7 @@ const Project = forwardRef(({ onClickContact }, ref) => {
             startDate: "2023년 12월 12일",
             endDate: "2023년 12월 23일",
             responsive: false,
-            site: "",
+            site: "https://cosch218.github.io/2023_Portfolio/",
             git: "https://github.com/cosch218/2023_Portfolio",
         },
     ];
