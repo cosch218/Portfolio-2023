@@ -6,7 +6,7 @@ export const ContactBox = styled.div`
 `;
 
 export const Title = styled.p `
-    margin-top: 130px;
+    margin-top: 180px;
     font-family: 'Cafe24ClassicType-Regular';
     font-size: 2.2rem;
 `;

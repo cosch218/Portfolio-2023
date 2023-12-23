@@ -1,7 +1,7 @@
 import React, { forwardRef, useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect';
 import './About.style'
-import { AboutBox, Back, Intro, Typing } from './About.style';
+import { AboutBox, Back, Intro, Link, LinkBox, Typing } from './About.style';
 import Arrow from '../Arrow/Arrow';
 
 const About = forwardRef(({onClickSkill}, ref) => {
@@ -39,6 +39,11 @@ const About = forwardRef(({onClickSkill}, ref) => {
                     <p>그리고 주어진 일을 완벽하게 끝까지 해냈는지 체크하고 테스트 해보면서 <strong>꼼꼼하게</strong> 일하기를 좋아합니다.</p>
                     <p>마지막으로 지속가능성과 유지보수 및 <strong>협업을 위한</strong> 코드 작성을 중요하게 생각합니다.</p>
                 </Intro>
+
+                <LinkBox>
+                    <Link href='https://github.com/cosch218' target='_blank'>Github 바로가기</Link>
+                    <Link href='https://cosch218.tistory.com/' target='_blank'>Tistory 바로가기</Link>
+                </LinkBox>
                 
             </div>
 

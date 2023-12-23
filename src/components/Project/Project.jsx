@@ -1,12 +1,12 @@
 import React, { forwardRef, useEffect, useState } from 'react';
 import { Detail, Explain, ImgAndLinkBox, ImgBox, IntroBox, IntroTitle, Link, LinkBox, List, ProjectBox, Responsive, Sidebar, Tag, Title, Wrapper } from './Project.style';
-import { monivation1, monivation2, monivation3, monivation4 } from '../../assets/projectimg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import Arrow from '../Arrow/Arrow';
+import { calculator, cooking1, cooking2, cooking3, cooking4, cooking5, cooking6, monivation1, monivation2, monivation3, monivation4, monivation5, monivation6, monivation7, monivation8, portfolio1, portfolio2, portfolio3, portfolio4, portfolio5, todolist1, todolist2, todolist3, todolist4 } from '../../assets/projectimg';
 
 const Project = forwardRef(({ onClickContact }, ref) => {
 
@@ -20,7 +20,8 @@ const Project = forwardRef(({ onClickContact }, ref) => {
             type: "토이",
             role: null,
             title: "Todolist",
-            imgs: [],
+            videos: [],
+            imgs: [todolist1, todolist2, todolist3, todolist4],
             explain: [
                 "리덕스 툴킷을 연습하고자 진행했던 투두리스트 프로젝트입니다.",
             ],
@@ -37,7 +38,8 @@ const Project = forwardRef(({ onClickContact }, ref) => {
             type: "토이",
             role: null,
             title: "Apple Calculator",
-            imgs: [],
+            videos: [],
+            imgs: [calculator],
             explain: [
                 "타입스크립트로 리액트 컴포넌트 작성하는 것을 연습하고자 진행한 프로젝트 입니다.",
             ],
@@ -54,7 +56,8 @@ const Project = forwardRef(({ onClickContact }, ref) => {
             type: "개인",
             role: null,
             title: "COOKING",
-            imgs: [],
+            videos: [],
+            imgs: [cooking1, cooking2, cooking3, cooking4, cooking5, cooking6],
             explain: [
                 "프로젝트 기획 당시 리액트 useState, useEffect, API에 대해 배우고 있었기에 카카오 지도 API와 글쓰기, 스크랩 등의 기능을 중점으로 프로젝트를 진행해 보고자 요리에 관한 웹사이트를 제작했습니다.",
                 "이 프로젝트는 제가 주로 사용하는 어플 우리의 식탁과 당근마켓에서 영감을 받아 요리 관련 어플에서도 사용자가 등록한 위치를 기반으로 가게나 요리학원을 확인하고 이런 컨텐츠를 중심으로 게시판이 활성화되면 재밌겠다는 생각에 제작하게 되었습니다.",
@@ -72,7 +75,8 @@ const Project = forwardRef(({ onClickContact }, ref) => {
             type: "팀",
             role: "팀장",
             title: "MONIVATION",
-            imgs: [monivation1, monivation2, monivation3, monivation4],
+            videos: [],
+            imgs: [monivation1, monivation2, monivation3, monivation4, monivation5, monivation6, monivation7, monivation8],
             explain: [
                 "프론트엔드 개발 첫 팀 프로젝트이자 팀장을 맡게 되어 개발팀을 어떻게 끌고 가면 되는지에 대한 것부터 기획, 여러가지 라이브러리 사용에 대한 공부를 할 수 있었습니다.",
                 "MONIVATION은 Money와 Motivation을 결합한 단어로 돈관리에 동기부여를 더하자는 슬로건을 가지고 만들어진 프로젝트입니다.",
@@ -91,7 +95,8 @@ const Project = forwardRef(({ onClickContact }, ref) => {
             type: "개인",
             role: null,
             title: "Portfolio",
-            imgs: [],
+            videos: [],
+            imgs: [portfolio1, portfolio2, portfolio3, portfolio4, portfolio5],
             explain: [
                 "프론트엔드 개발자로 취업을 위한 프로젝트입니다. 정보성 페이지이기 때문에 적절히 동적이면서 저에 대한 정보가 한 눈에 깔끔히 들어오는 것을 목표로 제작했습니다.",
                 "페이지를 들어오면 보이는 첫 화면에서 요소의 움직임으로 신선한 인상을 주고자 하였고 이를 위해 비동기 처리로 애니메이션을 제작했습니다.",
@@ -183,6 +188,7 @@ const Project = forwardRef(({ onClickContact }, ref) => {
                             {
                                 playSwiper && selectedProject.imgs.length > 0 &&
                                     (<Swiper
+                                        key={selectedProject.id}
                                         slidesPerView={1}
                                         centeredSlides={true}
                                         autoplay={{
@@ -195,11 +201,22 @@ const Project = forwardRef(({ onClickContact }, ref) => {
                                         modules={[Autoplay, Pagination, Navigation]}
                                     >
                                         {
-                                            selectedProject.imgs.map((img, idx) => (
-                                                <SwiperSlide key={idx}>
-                                                    <img src={img} alt={`slide-img-${idx}`} width="100%"/>
-                                                </SwiperSlide>
-                                            ))
+                                            selectedProject.videos && (
+                                                selectedProject.videos.map((video, idx) => (
+                                                    <SwiperSlide key={idx}>
+                                                        <video src={video} type="video.mp4" width="100%" autoPlay loop muted/>
+                                                    </SwiperSlide>
+                                                ))
+                                            )
+                                        }
+                                        {
+                                            selectedProject.imgs && (
+                                                selectedProject.imgs.map((img, idx) => (
+                                                    <SwiperSlide key={idx}>
+                                                        <img src={img} alt={`slide-img-${idx}`} width="100%"/>
+                                                    </SwiperSlide>
+                                                ))
+                                            )
                                         }
                                     </Swiper>)
                             }

@@ -33,4 +33,28 @@ export const Intro = styled.div`
     & strong {
         background-color: #f3eed8;
     }
-`
+`;
+
+export const LinkBox = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 480px;
+    margin: auto;
+    margin-top: 70px;
+`;
+
+export const Link = styled.a`
+    text-decoration: none;
+    background: #202020;
+    color: white;
+    box-sizing: border-box;
+    padding: 15px 50px;
+    border: 1px solid #202020;
+
+    &:hover {
+        background: #e7da9e;
+        color: #202020;
+        border: 1.5px solid #7b7b7b;
+    }
+`;
