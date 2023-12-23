@@ -1,7 +1,5 @@
 export {default as todolist1} from './Todolist_img1.png';
 export {default as todolist2} from './Todolist_img2.png';
-export {default as todolist3} from './Todolist_img3.png';
-export {default as todolist4} from './Todolist_img4.png';
 export {default as calculator} from './AppleCalculator_img.png';
 export {default as cooking1} from './COOKING_img1.png';
 export {default as cooking2} from './COOKING_img2.png';

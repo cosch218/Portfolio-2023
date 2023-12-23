@@ -6,9 +6,24 @@ export const ContactBox = styled.div`
 `;
 
 export const Title = styled.p `
-    margin-top: 180px;
     font-family: 'Cafe24ClassicType-Regular';
     font-size: 2.2rem;
+
+    @media screen and (max-height: 863.99px) {
+        margin-top: 8%;
+    }
+
+    @media screen and (min-height: 864px) and (max-height: 999.99px) {
+        margin-top: 10%;
+    }
+
+    @media screen and (min-height: 1000px) and (max-height: 1199.99px) {
+        margin-top: 13%;
+    }
+
+    @media screen and (min-height: 1200px) {
+        margin-top: 17%;
+    }
 `;
 
 export const Form = styled.form `

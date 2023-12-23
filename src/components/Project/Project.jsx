@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import Arrow from '../Arrow/Arrow';
-import { calculator, cooking1, cooking2, cooking3, cooking4, cooking5, cooking6, monivation1, monivation2, monivation3, monivation4, monivation5, monivation6, monivation7, monivation8, portfolio1, portfolio2, portfolio3, portfolio4, portfolio5, todolist1, todolist2, todolist3, todolist4 } from '../../assets/projectimg';
+import { calculator, cooking1, cooking2, cooking3, cooking4, cooking5, cooking6, monivation1, monivation2, monivation3, monivation4, monivation5, monivation6, monivation7, monivation8, portfolio1, portfolio2, portfolio3, portfolio4, portfolio5, todolist1, todolist2 } from '../../assets/projectimg';
 
 const Project = forwardRef(({ onClickContact }, ref) => {
 
@@ -20,8 +20,7 @@ const Project = forwardRef(({ onClickContact }, ref) => {
             type: "토이",
             role: null,
             title: "Todolist",
-            videos: [],
-            imgs: [todolist1, todolist2, todolist3, todolist4],
+            imgs: [todolist1, todolist2],
             explain: [
                 "리덕스 툴킷을 연습하고자 진행했던 투두리스트 프로젝트입니다.",
             ],
@@ -38,7 +37,6 @@ const Project = forwardRef(({ onClickContact }, ref) => {
             type: "토이",
             role: null,
             title: "Apple Calculator",
-            videos: [],
             imgs: [calculator],
             explain: [
                 "타입스크립트로 리액트 컴포넌트 작성하는 것을 연습하고자 진행한 프로젝트 입니다.",
@@ -56,7 +54,6 @@ const Project = forwardRef(({ onClickContact }, ref) => {
             type: "개인",
             role: null,
             title: "COOKING",
-            videos: [],
             imgs: [cooking1, cooking2, cooking3, cooking4, cooking5, cooking6],
             explain: [
                 "프로젝트 기획 당시 리액트 useState, useEffect, API에 대해 배우고 있었기에 카카오 지도 API와 글쓰기, 스크랩 등의 기능을 중점으로 프로젝트를 진행해 보고자 요리에 관한 웹사이트를 제작했습니다.",
@@ -75,7 +72,6 @@ const Project = forwardRef(({ onClickContact }, ref) => {
             type: "팀",
             role: "팀장",
             title: "MONIVATION",
-            videos: [],
             imgs: [monivation1, monivation2, monivation3, monivation4, monivation5, monivation6, monivation7, monivation8],
             explain: [
                 "프론트엔드 개발 첫 팀 프로젝트이자 팀장을 맡게 되어 개발팀을 어떻게 끌고 가면 되는지에 대한 것부터 기획, 여러가지 라이브러리 사용에 대한 공부를 할 수 있었습니다.",
@@ -95,7 +91,6 @@ const Project = forwardRef(({ onClickContact }, ref) => {
             type: "개인",
             role: null,
             title: "Portfolio",
-            videos: [],
             imgs: [portfolio1, portfolio2, portfolio3, portfolio4, portfolio5],
             explain: [
                 "프론트엔드 개발자로 취업을 위한 프로젝트입니다. 정보성 페이지이기 때문에 적절히 동적이면서 저에 대한 정보가 한 눈에 깔끔히 들어오는 것을 목표로 제작했습니다.",
@@ -141,7 +136,11 @@ const Project = forwardRef(({ onClickContact }, ref) => {
     return (
         <ProjectBox id='Project' ref={ref}>
 
-            <Title>Project</Title>
+            <Title
+                className={ window.innerHeight > 1080 ? "desktop" : "" }
+            >
+                Project
+            </Title>
 
             <Wrapper>
                 <Sidebar>
@@ -204,7 +203,7 @@ const Project = forwardRef(({ onClickContact }, ref) => {
                                             selectedProject.videos && (
                                                 selectedProject.videos.map((video, idx) => (
                                                     <SwiperSlide key={idx}>
-                                                        <video src={video} type="video.mp4" width="100%" autoPlay loop muted/>
+                                                        <video src={video} width="100%" autoPlay loop muted/>
                                                     </SwiperSlide>
                                                 ))
                                             )

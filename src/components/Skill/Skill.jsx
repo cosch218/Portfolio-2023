@@ -4,7 +4,7 @@ import { Explain, Group, Item, List, StackBox, Title } from './Skill.style';
 import { css, figma, firebase, github, html, illustrator, javascript, notion, photoshop, react, styledcomp, typescript, vscode } from '../../assets/skillslogo/index';
 
 const Skill = forwardRef(({ onClickProject }, ref) => {
-    
+
     return (
         <StackBox id='Skill' ref={ref}>
 
