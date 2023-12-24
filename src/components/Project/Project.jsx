@@ -60,7 +60,7 @@ const Project = forwardRef(({ onClickContact }, ref) => {
                 "이 프로젝트는 제가 주로 사용하는 어플 우리의 식탁과 당근마켓에서 영감을 받아 요리 관련 어플에서도 사용자가 등록한 위치를 기반으로 가게나 요리학원을 확인하고 이런 컨텐츠를 중심으로 게시판이 활성화되면 재밌겠다는 생각에 제작하게 되었습니다.",
             ],
             implement: "회원가입, 로그인, 레시피 작성, 레시피 수정 및 삭제, 스크랩, 댓글, 데이터 랜덤 추출, 데이터 항목별 추출, 카카오 지도 API를 사용해 사용자가 등록한 주소를 기반으로 항목별 주변 사업장의 위치 출력",
-            tags: ["React", "React Router", "React-Icon", "Kakao Map API", "Swiper"],
+            tags: ["React", "React Router", "React-Icon", "Kakao Map API", "Context API", "Swiper"],
             startDate: "2023년 4월 15일",
             endDate: "2023년 5월 9일",
             responsive: false,
