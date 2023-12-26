@@ -27,9 +27,9 @@ export const Title = styled.p `
 
 export const Wrapper = styled.div`
     width: 1300px;
-    height: 450px;
+    height: 460px;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 35px;
     display: flex;
     justify-content: flex-start;
     box-shadow: 0 0 20px rgba(190, 190, 190, 0.2);
