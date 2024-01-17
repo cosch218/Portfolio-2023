@@ -29,7 +29,7 @@ const Project = forwardRef(({ onClickContact }, ref) => {
             startDate: "2023년 12월 9일",
             endDate: "2023년 12월 10일",
             responsive: false,
-            site: "https://cosch218.github.io/2023_redux_toolkit_todolist/",
+            site: "https://cosch218.github.io/React-todolist-with-Redux-toolkit/",
             git: "https://github.com/cosch218/2023_redux_toolkit_todolist",
         },
         {
@@ -46,7 +46,7 @@ const Project = forwardRef(({ onClickContact }, ref) => {
             startDate: "2023년 12월 10일",
             endDate: "2023년 12월 10일",
             responsive: false,
-            site: "https://cosch218.github.io/2023_typescript_calculator/",
+            site: "https://cosch218.github.io/Typescript-calculator/",
             git: "https://github.com/cosch218/2023_typescript_calculator",
         },
         {
@@ -64,7 +64,7 @@ const Project = forwardRef(({ onClickContact }, ref) => {
             startDate: "2023년 4월 15일",
             endDate: "2023년 5월 9일",
             responsive: false,
-            site: "https://cosch218.github.io/2023-project-cooking",
+            site: "	https://cosch218.github.io/Project-cooking/",
             git: "https://github.com/cosch218/2023-project-cooking",
         },
         {
@@ -103,7 +103,7 @@ const Project = forwardRef(({ onClickContact }, ref) => {
             startDate: "2023년 12월 12일",
             endDate: "2023년 12월 23일",
             responsive: false,
-            site: "https://cosch218.github.io/2023_Portfolio/",
+            site: "https://cosch218.github.io/Portfolio-2023/",
             git: "https://github.com/cosch218/2023_Portfolio",
         },
     ];
